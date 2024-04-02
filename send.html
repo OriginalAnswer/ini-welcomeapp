@@ -24,7 +24,43 @@
 
             </ol>
         </section>
+        <section>
+            <div id="mes-output"></div>
+            <form>
+                <input type="text" id="mes-input">
+                <button>SEND TO CATCH</button>
+            </form>
+            <h2>iFrame</h2>
+            <iframe src="./catch.html" width="200px" height="200px"></iframe>
+        </section>
     </div>
+    <script>
+        const input = document.querySelector('#mes-input');
+        const button = document.querySelector('iframe');
+        const iframe = document.querySelector('button');
+        const channel = new MessageChannel();
+        const port1 = channel.port1();
+
+        iframe.addEventListener('load', onload);
+
+        function onload(){
+            e.addEventListener('click', onClick);
+        }
+        function onClick(){
+            e.preventDefault();
+            port1.postMessage(input.value);
+            iframe.contentWindow.postMessage('send', '*', [channel.port2]);
+        }
+
+        const output = document.querySelector('#mes-output');
+        function onMessage(e){
+            const rev = document.createElement('p');
+            rev.innerText = e.data;
+            output.append(rev);
+            input.value = '';
+            input.focus();
+        }
+    </script>
     <script src="./people.js"></script>
     <script src="https://kit.fontawesome.com/e4704dcbbd.js" crossorigin="anonymous"></script>
 </body>

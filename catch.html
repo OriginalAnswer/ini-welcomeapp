@@ -17,8 +17,29 @@
         <section>
             <p>환영합니다🎉</p>
         </section>
+        <section>
+            <ul></ul>
+
+
+        </section>
     </div>
 <script>
+    const list = document.querySelector('ul');
+    let port2;
+
+    window.addEventListener('message', initPort);
+    function initPort(e){
+        port2 = e.ports[0];
+        port2.onmessage = onMessage;
+    }
+    function onMessage(e){
+        const listItem = document.createElement('li');
+        listItem.textContent = e.data;
+        list.appendChild(listItem);
+
+        port2.postMessage('받는거' + e.data);
+    }
+
 </script>
 </body>
 </html>
