@@ -4,6 +4,14 @@
     font-weight: 400;
     font-style: normal;
 }
+:root{
+    --ini-color: #e7843d;
+
+    --card-border: 1px solid #ffffff;
+    --card-border-radius: 20px;
+    --card-font-size: 3em;
+    --card-bgcolor: #fff;
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -49,6 +57,7 @@ time, mark, audio, video {
 body{
     font-family: 'Pretendard-Regular', Helvetica,sans-serif ,serif;
     overflow-x: hidden;
+    width: 100vw;
 }
 /* ============== */
 .dpnone{
@@ -59,3 +68,73 @@ body{
     background: #00000000; */
     visibility: hidden;
 }
+/* ++++++++++++++++++++++++++++++++++++++++++++++++============== */
+header{
+    position: absolute;
+    top: 0;left: 0;
+    width: 100%;
+    padding: 20px;
+    font-size: 32px;
+}
+/* ++++++++++++++++++++++++++++++++++++++++++++++++============== */
+.show,.ctrl{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+/* ++++++++++++++++++++++++++++++++++++++++++++++++============== */
+.show{
+    background-color: #ffe6e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.show header{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    color: var(--ini-color);
+    font-family: serif;
+
+}
+.logo{
+    height: 30px;
+    margin-right: 10px;
+}
+.logo-img{
+    height: 100%;
+}
+/* ++++++++++++++++++++++++++++++++++++++++++++++++============== */
+.ctrl{
+    padding-top: 100px;
+}
+#list-form{
+    display: flex;
+    flex-direction: column;
+}
+/* ++++++++++++++++++++++++++++++++++++++++++++++++============== */
+.card{
+    border: var(--card-border);
+    border-radius: var(--card-border-radius);
+    overflow: hidden;
+    text-align: center;
+    & >div{
+        padding: 15px 20px;
+    }
+    & .card-name, .card-company{
+        background-color: var(--card-bgcolor);
+    }
+    & .card-name{
+        font-size: 5em;
+        padding: 20px;
+    }
+    & .card-team{
+        font-size: 2em;
+    }
+    & .card-company{
+        font-size: 1.5em;
+        padding: 0px 10px 20px 10px;
+    }
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++============== */

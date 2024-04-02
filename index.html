@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>send</title>
+</head>
+<body>
+    <section class="show">
+        <header>
+            <div class="logo">
+                <img src="./INI logo.png" class="logo-img">
+            </div>
+            <span>
+                Insight Nexus Institute
+            </span>
+        </header>
+        
+        
+        <div class="selected-items">
+            <div class="selected-items-list">
+                <!-- 여기에 선택된 항목들이 나열됩니다 -->
+                <div class="card">
+                    <div class="card-team">TEAM A</div>
+                    <div class="card-name">김은수</div>
+                    <div class="card-company">영암CC</div>
+                </div>
+            </div>
+        </div>
+        <span>님</span>
+        <p>환영합니다🎉</p>
+        <footer>
+
+        </footer>
+    </section>
+    
+    <section class="ctrl">
+        <header>
+            <span>
+                INI 오프라인 컨트롤 for 입장자 팀보기 및 환영
+            </span>
+        </header>
+        
+        <label class="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input id="input-search" type="text" placeholder="이름 입력" onkeyup="search()">
+        </label>
+        <button class="reset-button" onclick="checkreset()">리셋</button>            
+        <button class="submit-button" form="list-form">제출</button>
+        <form id="list-form">
+            
+        </form>
+    </section>
+    <script src="./people.js"></script>
+    <script src="https://kit.fontawesome.com/e4704dcbbd.js" crossorigin="anonymous"></script>
+</body>
+</html>
