@@ -3,9 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>send</title>
 </head>
 <body>
-    
+    <div class="wrapper">
+        <span>하버드 강연 입장 컨트롤 페이지</span>
+        <section>
+            <div class="search box-type-3 margin-lr">
+                <label for="input-search" class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </label>
+                <input id="input-search" type="text" placeholder="이름 입력" onkeyup="search()">
+                <label for="input-search" class="search-icon hidden">
+                </label>
+            </div>
+        </section>
+        <section>
+            <ol class="list-ol">
+
+            </ol>
+        </section>
+    </div>
+    <script src="./people.js"></script>
+    <script src="https://kit.fontawesome.com/e4704dcbbd.js" crossorigin="anonymous"></script>
 </body>
 </html>
