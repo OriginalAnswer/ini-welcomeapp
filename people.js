@@ -12,7 +12,7 @@ const peopleDB = [
     {team:"A",name:"최성욱",company:"엠에스전자"},
 
     // B team
-    {team:"B",name:"김종혁",company:''},
+    {team:"B",name:"김종혁",company:'INI'},
     {team:"B",name:"민태홍",company:'알렉산더민 갤러리'},
     {team:"B",name:"박동우",company:'군인공제회'},
     
@@ -78,10 +78,8 @@ const inputSearch = document.getElementById('input-search');
 const pp = document.querySelectorAll('.item'); 
 
 function search() {
-    // 입력된 검색어 가져오기
     const searchValue = inputSearch.value.toLowerCase();
     console.log(searchValue);
-    // 각 제품에 대해 검색어와 일치하는지 확인하여 필터링
     const pp = document.querySelectorAll('.item'); 
     for (var i = 0; i < pp.length; i++) {
         const itemName = pp[i].getElementsByClassName("item-name")[0].textContent.toLowerCase();
